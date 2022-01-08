@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "Merriweather", serif;
+  src: url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Rokkitt:wght@400;500;700;800;900&display=swap");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&family=Rokkitt:wght@400;500;700;800;900&display=swap");
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-image: url("../assets/img/header-bg.png");
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+.header__wrap {
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__nav {
+  margin-left: auto;
+  padding-right: 3px;
+}
+
+.header__lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.logo__icon {
+  width: 50px;
+  height: 50px;
+  padding-top: 5px;
+  fill: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.logo__icon:hover {
+  fill: #bdae82;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__item {
+  margin-right: 29px;
+}
+
+.nav__link {
+  font-size: 20px;
+  letter-spacing: 0.9px;
+  color: #ffffff;
+}
+
+.lang__item {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.lang__input {
+  display: none;
+}
+
+.lang__line {
+  width: 2px;
+  height: 18px;
+  margin: 1px 12px;
+  display: block;
+  background: #ffffff;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+.active {
+  color: #bdae82;
+}
+/*# sourceMappingURL=style.css.map */
