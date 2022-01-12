@@ -1,0 +1,36 @@
+.hero {
+  // .hero__wrap
+  &__wrap {
+    padding: 144px 0 328px 60px;
+    background-image: url("../assets/img/header-bg.png");
+    background-position: center -90px;
+    background-repeat: no-repeat;
+  }
+  // .hero__content
+  &__content {
+    max-width: 470px;
+  }
+  // .hero__title
+  &__title {
+    margin-bottom: 37px;
+    font-family: $merri;
+    font-size: 60px;
+    font-weight: bold;
+  }
+  // .hero__desc
+  &__desc {
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 2;
+  }
+  // .hero__btn
+  &__btn {
+    font-weight: 300;
+    transition: 0.4s;
+    &:hover {
+      background: #807248;
+      color: #fff;
+      transition: 0.3s;
+    }
+  }
+}

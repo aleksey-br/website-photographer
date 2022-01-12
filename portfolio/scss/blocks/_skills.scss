@@ -1,0 +1,48 @@
+.skills {
+  margin-bottom: 60px;
+  // .skills__wrap
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  // .skills__item
+  &__item {
+    width: 320px;
+    height: 250px;
+    text-align: center;
+    padding-top: 110px;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    &:nth-child(1) {
+      background-image: url("../assets/img/camera.png");
+      background-size: 62px 50px;
+    }
+    &:nth-child(2) {
+      background-image: url("../assets/img/video.png");
+      background-size: 62px 50px;
+    }
+    &:nth-child(3) {
+      background-image: url("../assets/img/image.png");
+      background-size: 62px 50px;
+    }
+    &:nth-child(4) {
+      background-image: url("../assets/img/mic.png");
+      background-size: 34px 50px;
+    }
+  }
+}
+
+.skill {
+  // .skill__title
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 31px;
+  }
+  // .skill__desc
+  &__desc {
+    font-size: 18px;
+    line-height: 1.9;
+  }
+}
