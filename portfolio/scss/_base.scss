@@ -10,13 +10,16 @@ a {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: $bgDark;
   font-family: $inter;
   font-weight: normal;
   font-size: 18px;
   color: $white;
-  scroll-behavior: smooth;
 }
 
 section {

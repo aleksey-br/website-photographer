@@ -4,7 +4,7 @@
     height: 90px;
     display: flex;
     align-items: center;
-    background: url("../assets/img/header-bg.png");
+    background: url("../assets/img/header-bg.jpg");
     background-repeat: no-repeat;
     background-position: center 0;
   }
@@ -35,8 +35,10 @@
   width: 50px;
   height: 50px;
   fill: #cdc6db;
+  transition: 0.3s;
   &:hover {
     fill: $gold;
+    transition: 0.3s;
   }
 }
 .nav {
@@ -79,4 +81,8 @@
   &__input {
     display: none;
   }
+}
+
+.active-lang {
+  color: $gold;
 }
