@@ -1,12 +1,17 @@
 .contacts {
+  // .contacts__bg
+  &__bg {
+    background-image: url("../assets/img/contacts.jpg");
+    background-size: auto 700px;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
   // .contacts__wrap
   &__wrap {
     margin: -20px;
     // height: 700px;
     display: flex;
     justify-content: right;
-    background-image: url("../assets/img/contacts.jpg");
-    background-size: auto 700px;
   }
   // .contacts__content
   &__content {
@@ -77,6 +82,7 @@
   &__btn--submit {
     padding: 15px 40px;
     background: $gold;
+    border: none;
     font-size: 20px;
     color: #000;
     cursor: pointer;

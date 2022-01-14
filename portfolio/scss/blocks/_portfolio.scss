@@ -41,6 +41,9 @@
 .active-btn {
   background: $gold;
   color: #000;
+  &:hover {
+    color: #000;
+  }
 }
 
 .photo {

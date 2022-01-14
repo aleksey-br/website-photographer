@@ -11,72 +11,79 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <div class="header__wrap">
-          <div class="header__logo">
-            <a href="#">
-              <svg class="icon">
-                <use xlink:href="./assets/img/svg/logo-sprite.svg#logo"></use>
-              </svg>
-            </a>
-          </div>
-          <nav class="header__nav nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="#skills" class="nav__link">Skills</a>
-              </li>
-              <li class="nav__item">
-                <a href="#portfolio" class="nav__link">Portfolio</a>
-              </li>
-              <li class="nav__item">
-                <a href="#video" class="nav__link">Video</a>
-              </li>
-              <li class="nav__item">
-                <a href="#price" class="nav__link">Price</a>
-              </li>
-              <li class="nav__item">
-                <a href="#contacts" class="nav__link">Contacts</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="header__lang lang">
-            <label for="en" class="lang__item active-lang">
-              <span>en</span>
-              <input
-                class="lang__input"
-                type="radio"
-                name="lang-input"
-                id="en" /></label
-            ><label for="ru" class="lang__item">
-              <span>ru</span>
-              <input
-                class="lang__input"
-                type="radio"
-                name="lang-input"
-                id="ru"
-              />
-            </label>
+      <div class="header__bg">
+        <div class="container">
+          <div class="header__wrap">
+            <div class="header__logo">
+              <a href="#">
+                <svg class="icon">
+                  <use xlink:href="./assets/img/svg/logo-sprite.svg#logo"></use>
+                </svg>
+              </a>
+            </div>
+            <nav class="header__nav nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="#skills" class="nav__link">Skills</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#portfolio" class="nav__link">Portfolio</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#video" class="nav__link">Video</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#price" class="nav__link">Price</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#contacts" class="nav__link">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__lang lang">
+              <label for="en" class="lang__item active-lang">
+                <span>en</span>
+                <input
+                  class="lang__input"
+                  type="radio"
+                  name="lang-input"
+                  id="en" /></label
+              ><label for="ru" class="lang__item">
+                <span>ru</span>
+                <input
+                  class="lang__input"
+                  type="radio"
+                  name="lang-input"
+                  id="ru"
+                />
+              </label>
+            </div>
           </div>
         </div>
       </div>
     </header>
     <!-- /.header -->
     <main class="main">
-      <div class="container">
-        <section class="hero">
-          <div class="hero__wrap">
-            <div class="hero__content">
-              <h1 class="hero__title">Alexa Rise</h1>
-              <p class="hero__desc">
-                Save sincere emotions, romantic feelings and happy moments of
-                life together with professional photographer Alexa Rise
-              </p>
-              <button class="hero__btn btn">Hire me</button>
+      <section class="hero">
+        <div class="hero__bg">
+          <div class="container">
+            <div class="hero__wrap">
+              <div class="hero__content">
+                <h1 class="hero__title">Alexa Rise</h1>
+                <p class="hero__desc">
+                  Save sincere emotions, romantic feelings and happy moments of
+                  life together with professional photographer Alexa Rise
+                </p>
+                <button class="hero__btn btn">Hire me</button>
+              </div>
             </div>
           </div>
-        </section>
-        <!-- /.hero -->
-        <section class="skills" id="skills">
+        </div>
+      </section>
+      <!-- /.hero -->
+
+      <section class="skills" id="skills">
+        <div class="container">
           <div class="section__title"><h2>Skills</h2></div>
           <div class="skills__wrap">
             <div class="skills__item skill">
@@ -108,9 +115,11 @@
               </p>
             </div>
           </div>
-        </section>
-        <!-- /.skills -->
-        <section id="portfolio" class="portfolio">
+        </div>
+      </section>
+      <!-- /.skills -->
+      <section id="portfolio" class="portfolio">
+        <div class="container">
           <div class="section__title"><h2>Portfolio</h2></div>
           <div class="portfolio__wrap">
             <div class="portfolio__btn-group">
@@ -140,9 +149,11 @@
               </div>
             </div>
           </div>
-        </section>
-        <!-- /.portfolio -->
-        <section id="video" class="video">
+        </div>
+      </section>
+      <!-- /.portfolio -->
+      <section id="video" class="video">
+        <div class="container">
           <div class="section__title"><h2>Video</h2></div>
           <div class="video-player">
             <button class="video-player__btn">
@@ -151,9 +162,11 @@
               </svg>
             </button>
           </div>
-        </section>
-        <!-- /.video -->
-        <section id="price" class="price">
+        </div>
+      </section>
+      <!-- /.video -->
+      <section id="price" class="price">
+        <div class="container">
           <div class="section__title"><h2>Price</h2></div>
           <div class="price__wrap">
             <div class="price__card card">
@@ -197,42 +210,46 @@
               </div>
             </div>
           </div>
-        </section>
-        <!-- /.price -->
-        <section id="contacts" class="contacts">
-          <div class="contacts__wrap">
-            <div class="contacts__content">
-              <h2 class="contacts__section-title">Contact me</h2>
-              <div class="contacts__form">
-                <form action="#" class="form">
-                  <input
-                    type="email"
-                    class="form__input--mail"
-                    placeholder="E-mail"
-                  />
-                  <input
-                    type="tel"
-                    class="form__input--phone"
-                    placeholder="Phone"
-                  />
-                  <textarea
-                    name="message"
-                    id="message"
-                    cols="30"
-                    rows="10"
-                    class="form__message--text"
-                    placeholder="Message"
-                  ></textarea>
-                  <div class="form__button">
-                    <button class="form__btn--submit">Send message</button>
-                  </div>
-                </form>
+        </div>
+      </section>
+      <!-- /.price -->
+      <section id="contacts" class="contacts">
+        <div class="contacts__bg">
+          <div class="container">
+            <div class="contacts__wrap">
+              <div class="contacts__content">
+                <h2 class="contacts__section-title">Contact me</h2>
+                <div class="contacts__form">
+                  <form action="#" class="form">
+                    <input
+                      type="email"
+                      class="form__input--mail"
+                      placeholder="E-mail"
+                    />
+                    <input
+                      type="tel"
+                      class="form__input--phone"
+                      placeholder="Phone"
+                    />
+                    <textarea
+                      name="message"
+                      id="message"
+                      cols="30"
+                      rows="10"
+                      class="form__message--text"
+                      placeholder="Message"
+                    ></textarea>
+                    <div class="form__button">
+                      <button class="form__btn--submit">Send message</button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </section>
-        <!-- /.contacts -->
-      </div>
+        </div>
+      </section>
+      <!-- /.contacts -->
     </main>
     <!-- /.main -->
     <footer class="footer">

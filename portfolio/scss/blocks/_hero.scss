@@ -1,10 +1,13 @@
 .hero {
-  // .hero__wrap
-  &__wrap {
-    padding: 144px 0 328px 60px;
+  // .hero__bg
+  &__bg {
     background-image: url("../assets/img/header-bg.jpg");
     background-position: center -90px;
     background-repeat: no-repeat;
+  }
+  // .hero__wrap
+  &__wrap {
+    padding: 144px 0 328px 60px;
   }
   // .hero__content
   &__content {
