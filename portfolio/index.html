@@ -22,14 +22,13 @@
               </a>
             </div>
             <nav class="header__nav nav">
-              <div class="header__nav-btn">
-                <svg class="nav-icon">
-                  <use
-                    xlink:href="./assets/img/svg/hamburger-sprite.svg#hamburger"
-                  ></use>
-                </svg>
+              <div class="header__nav-btn js-nav-btn">
+                <input type="checkbox" id="nav-btn" />
+                <span class="header__nav-btn--line"></span>
+                <span class="header__nav-btn--line"></span>
+                <span class="header__nav-btn--line"></span>
               </div>
-              <ul class="nav__list">
+              <ul class="nav__list js-nav">
                 <li class="nav__item">
                   <a href="#skills" class="nav__link">Skills</a>
                 </li>
@@ -160,7 +159,7 @@
       </section>
       <!-- /.portfolio -->
       <section id="video" class="video">
-        <div class="container">
+        <div class="container video__container">
           <div class="section__title"><h2>Video</h2></div>
           <div class="video-player">
             <button class="video-player__btn">

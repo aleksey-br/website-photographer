@@ -1,4 +1,9 @@
 .video {
+  &__container {
+    @include _768 {
+      padding: 0;
+    }
+  }
 }
 
 .video-player {
@@ -8,6 +13,16 @@
   align-items: center;
   justify-content: center;
   background-image: url("../assets/img/video-player.jpg");
+
+  @include _768 {
+    height: 424px;
+    background-size: auto 408px;
+    background-position: 0px 10px;
+    background-repeat: no-repeat;
+  }
+  @include _480 {
+    background-position: -100px;
+  }
   // .video-player__btn
   &__btn {
     background: none;
@@ -20,6 +35,11 @@
     fill: $white;
     cursor: pointer;
     transition: 0.3s;
+
+    @include _768 {
+      width: 65px;
+      height: 65px;
+    }
 
     &:hover {
       fill: $gold;

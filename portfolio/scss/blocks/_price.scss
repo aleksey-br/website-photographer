@@ -4,6 +4,11 @@
     display: flex;
     gap: 25px;
     flex-wrap: wrap;
+    @include _768 {
+      justify-content: center;
+      gap: 50px;
+      padding-top: 4px;
+    }
   }
   // .price__card
   &__card {
@@ -13,6 +18,19 @@
 
     &:last-child {
       padding-right: 109px;
+      @include _768 {
+        padding-right: 96px;
+      }
+      @include _480 {
+        padding: 42px 30px;
+      }
+    }
+    @include _768 {
+      max-width: 420px;
+      padding: 42px 96px 40px;
+    }
+    @include _480 {
+      padding: 42px 30px;
     }
   }
 }

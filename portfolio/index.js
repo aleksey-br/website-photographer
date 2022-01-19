@@ -1,3 +1,30 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const navBtn = document.querySelector(".js-nav-btn"),
+    navLink = document.querySelectorAll(".nav__link");
+  nav = document.querySelector(".js-nav");
+
+  function openNav() {
+    nav.classList.toggle("open");
+    if (nav.classList.contains("open")) {
+      navBtn.style.zIndex = "9999";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.removeAttribute("style");
+    }
+  }
+
+  function closeNav() {
+    nav.classList.remove("open");
+    if (!nav.classList.contains("open")) {
+      navBtn.children[0].checked = false;
+      document.body.removeAttribute("style");
+    }
+  }
+
+  navLink.forEach((link) => link.addEventListener("click", closeNav)); //закрытие меню
+  navBtn.addEventListener("click", openNav); // открытие меню
+});
+
 //self-esteem
 
 console.log(`

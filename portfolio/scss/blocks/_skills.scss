@@ -9,6 +9,9 @@
     @include _768 {
       padding: 0px 34px 0 30px;
     }
+    @media (max-width: 746px) {
+      justify-content: center;
+    }
   }
   // .skills__item
   &__item {

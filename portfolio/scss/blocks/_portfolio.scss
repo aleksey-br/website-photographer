@@ -1,5 +1,8 @@
 .portfolio {
   padding-top: 50px;
+  @include _768 {
+    padding-top: 47px;
+  }
   // .portfolio__wrap
   &__wrap {
   }
@@ -10,6 +13,11 @@
     flex-wrap: wrap;
     gap: 5px;
     padding-top: 3px;
+
+    @include _768 {
+      max-width: 450px;
+      margin: 0 auto;
+    }
   }
   // .portfolio__photo
   &__photo {
@@ -17,6 +25,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
+    @include _768 {
+      justify-content: center;
+      gap: 28px;
+    }
   }
 }
 

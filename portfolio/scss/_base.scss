@@ -20,6 +20,9 @@ body {
   font-weight: normal;
   font-size: 18px;
   color: $white;
+  @include _768 {
+    overflow-x: hidden;
+  }
 }
 
 section {
@@ -29,6 +32,9 @@ section {
   }
   @include _768 {
     margin-bottom: 100px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
   }
 }
 
@@ -64,7 +70,7 @@ section {
     display: inline-block;
     padding: 0 20px;
     position: relative;
-    z-index: 999;
+    z-index: 997;
     background: $bgDark;
     @include _768 {
       font-size: 32px;
@@ -78,6 +84,10 @@ section {
     top: 50%;
     left: 0;
     background: $gold;
+  }
+
+  @include _480 {
+    max-width: 280px;
   }
 }
 // !section title
