@@ -82,7 +82,7 @@
       flex-direction: column;
       justify-content: center;
       gap: 10px;
-      //  sxsxsxs
+
       &--line {
         display: block;
         width: 100%;
@@ -90,6 +90,9 @@
         background: $white;
         position: relative;
         transition: 0.3s ease-in-out;
+      }
+      &:hover span {
+        background-color: $gold;
       }
     }
   }
