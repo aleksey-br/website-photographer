@@ -4,3 +4,16 @@
   font-size: 20px;
   font-weight: 700;
 }
+
+// Media queries
+
+@mixin _768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin _480 {
+  @media (max-width: 480px) {
+    @content;
+  }
+}

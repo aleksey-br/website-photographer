@@ -247,6 +247,9 @@ section:last-child {
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
   }
+  .header__nav-btn:hover span {
+    background-color: #bdae82;
+  }
 }
 
 .header__lang {

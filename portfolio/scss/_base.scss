@@ -20,6 +20,9 @@ body {
   font-weight: normal;
   font-size: 18px;
   color: $white;
+  @include _768 {
+    overflow-x: hidden;
+  }
 }
 
 section {
@@ -27,10 +30,16 @@ section {
   &:last-child {
     margin-bottom: 105px;
   }
+  @include _768 {
+    margin-bottom: 100px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -46,19 +55,26 @@ section {
 
 // section title
 .section__title {
-  width: 700px;
+  max-width: 700px;
   margin: 0 auto 76px;
   position: relative;
   font-family: $merri;
   font-size: 26px;
   text-align: center;
   color: $gold;
+  @include _768 {
+    max-width: 364px;
+    margin: 0 auto 67px;
+  }
   h2 {
     display: inline-block;
     padding: 0 20px;
     position: relative;
-    z-index: 999;
+    z-index: 997;
     background: $bgDark;
+    @include _768 {
+      font-size: 32px;
+    }
   }
   &::after {
     content: "";
@@ -68,6 +84,10 @@ section {
     top: 50%;
     left: 0;
     background: $gold;
+  }
+
+  @include _480 {
+    max-width: 280px;
   }
 }
 // !section title

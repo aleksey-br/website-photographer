@@ -4,14 +4,31 @@
     background-image: url("../assets/img/header-bg.jpg");
     background-position: center -90px;
     background-repeat: no-repeat;
+    @include _768 {
+      background-position: -5px -120px;
+      background-size: auto 620px;
+    }
+    @include _480 {
+      background-position: center;
+    }
   }
   // .hero__wrap
   &__wrap {
     padding: 144px 0 328px 60px;
+
+    @include _768 {
+      padding: 70px 0 152px 40px;
+    }
+    @include _480 {
+      padding: 70px 0 152px 0px;
+    }
   }
   // .hero__content
   &__content {
     max-width: 470px;
+    @include _768 {
+      max-width: 420px;
+    }
   }
   // .hero__title
   &__title {
@@ -19,12 +36,22 @@
     font-family: $merri;
     font-size: 60px;
     font-weight: bold;
+    @include _768 {
+      font-size: 32px;
+      font-weight: 400;
+      margin-bottom: 33px;
+    }
   }
   // .hero__desc
   &__desc {
     margin-bottom: 25px;
     font-size: 20px;
+    font-weight: 400;
     line-height: 2;
+    @include _768 {
+      margin-bottom: 60px;
+      line-height: 1.2;
+    }
   }
   // .hero__btn
   &__btn {
