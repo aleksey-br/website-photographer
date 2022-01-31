@@ -1,4 +1,5 @@
 .hero {
+  background: #000;
   // .hero__bg
   &__bg {
     background-image: url("../assets/img/header-bg.jpg");
@@ -36,6 +37,7 @@
     font-family: $merri;
     font-size: 60px;
     font-weight: bold;
+    color: $whiteText;
     @include _768 {
       font-size: 32px;
       font-weight: 400;
@@ -48,6 +50,7 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 2;
+    color: $whiteText;
     @include _768 {
       margin-bottom: 60px;
       line-height: 1.2;

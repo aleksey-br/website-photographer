@@ -1,4 +1,5 @@
 .footer {
+  background: #000;
   @include _768 {
     height: 190px;
   }
@@ -8,11 +9,11 @@
     height: 100px;
     display: flex;
     justify-content: space-between;
-    margin: -40px 0px;
+    align-items: center;
 
     @include _768 {
       display: block;
-      padding-top: 65px;
+      padding-top: 35px;
     }
   }
   // .footer__col
@@ -45,7 +46,7 @@
   &__icon {
     width: 32px;
     height: 32px;
-    fill: $white;
+    fill: $whiteText;
 
     &:hover {
       fill: $gold;
@@ -55,7 +56,7 @@
   &__link-course {
     margin-left: 45px;
     font-size: 20px;
-    color: $white;
+    color: $whiteText;
     &:hover {
       color: $gold;
       transition: 0.3s;
@@ -70,17 +71,19 @@
   // .left-block__cop
   &__cop {
     font-size: 20px;
+    color: $whiteText;
   }
   // .left-block__year
   &__year {
     margin-left: 15px;
     font-size: 20px;
+    color: $whiteText;
   }
   // .left-block__link
   &__link {
     margin-left: 15px;
     font-size: 20px;
-    color: $white;
+    color: $whiteText;
     &:hover {
       color: $gold;
       transition: 0.3s;

@@ -12,6 +12,11 @@
     @content;
   }
 }
+@mixin _600 {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
 @mixin _480 {
   @media (max-width: 480px) {
     @content;

@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  background: #000;
   // .header__bg
   &__bg {
     background: url("../assets/img/header-bg.jpg");
@@ -62,7 +63,7 @@
       &:checked ~ span:nth-last-child(3) {
         opacity: 1;
         transform: rotate(45deg) translate(10px, 10px) scale(1.2);
-        background: $white;
+        background: $textColor;
         transition: 0.3s ease-in-out;
       }
       &:checked ~ span:nth-last-child(2) {
@@ -72,7 +73,7 @@
       &:checked ~ span:nth-last-child(1) {
         opacity: 1;
         transform: rotate(-45deg) translate(8px, -9px) scale(1.2);
-        background: $white;
+        background: $textColor;
         transition: 0.3s ease-in-out;
       }
     }
@@ -87,11 +88,14 @@
         display: block;
         width: 100%;
         height: 2px;
-        background: $white;
+        background: $whiteText;
         position: relative;
         transition: 0.3s ease-in-out;
       }
-      &:hover span {
+      // &:hover span {
+      //   background-color: $gold;
+      // }
+      &:active span {
         background-color: $gold;
       }
     }
@@ -106,7 +110,7 @@
       position: absolute;
       top: 4px;
       left: 50%;
-      background: $white;
+      background: $whiteText;
       transform: rotate(14deg);
       @include _768 {
         top: 2px;
@@ -120,28 +124,22 @@
       margin-left: auto;
     }
   }
+  &__theme {
+    margin-left: 30px;
+  }
 }
 
 .logo-icon {
   width: 50px;
   height: 50px;
-  fill: $white;
+  fill: $whiteText;
   transition: 0.3s;
   &:hover {
     fill: $gold;
     transition: 0.3s;
   }
 }
-// .nav-icon {
-//   width: 50px;
-//   height: 50px;
-//   fill: $white;
-//   transition: 0.3s;
-//   &:hover {
-//     fill: $gold;
-//     transition: 0.3s;
-//   }
-// }
+
 .nav {
   // .nav__list
   &__list {
@@ -152,7 +150,7 @@
       width: 100%;
       height: 100vh;
       flex-direction: column;
-      background: #000;
+      background: $bgDark;
       position: fixed;
       top: 0;
       right: -620px;
@@ -177,7 +175,7 @@
   // .nav__link
   &__link {
     font-size: 20px;
-    color: $white;
+    color: $whiteText;
     transition: 0.3s;
     &:hover {
       color: $gold;
@@ -185,6 +183,7 @@
     }
 
     @include _768 {
+      color: $textColor;
       font-size: 35px;
     }
   }
@@ -192,6 +191,7 @@
 .lang {
   // .lang__item
   &__item {
+    color: $whiteText;
     &:first-child {
       margin-right: 17px;
       @include _768 {
@@ -214,6 +214,43 @@
   }
 }
 
+.theme {
+  // .theme__btn
+  &__btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+.change-theme {
+  animation: IconRotate 0.9s;
+}
+@keyframes IconRotate {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(220deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.theme-icon {
+  width: 45px;
+  height: 45px;
+  fill: $whiteText;
+  transition: 0.3s;
+
+  &:hover {
+    fill: $gold;
+    transition: 0.3s;
+  }
+}
+
 .active-lang {
   color: $gold;
 }
@@ -227,7 +264,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: #000;
+    background: $bgDark;
     z-index: -1;
     opacity: 0.5;
   }

@@ -1,8 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const navBtn = document.querySelector(".js-nav-btn"),
-    navLink = document.querySelectorAll(".nav__link");
-  nav = document.querySelector(".js-nav");
+import i18Obj from "./translate.js";
 
+document.addEventListener("DOMContentLoaded", function () {
+  const navBtn = document.querySelector(".js-nav-btn"), // burger menu btn
+    navLink = document.querySelectorAll(".nav__link"), // mobile menu links
+    nav = document.querySelector(".js-nav"), // mobile menu
+    portfolioBtns = document.querySelector(".js-portfolio"), // btns portfolio
+    portfolioImgs = document.querySelectorAll(".js-portfolio-img"), // imgs portfolio
+    langRadioBtn = document.querySelector(".lang"), // lang btn
+    themeBtn = document.querySelector(".js-theme"); // theme btn
+
+  //  ================== Menu ==================
   function openNav() {
     nav.classList.toggle("open");
     if (nav.classList.contains("open")) {
@@ -23,10 +30,107 @@ document.addEventListener("DOMContentLoaded", function () {
 
   navLink.forEach((link) => link.addEventListener("click", closeNav)); //закрытие меню
   navBtn.addEventListener("click", openNav); // открытие меню
+
+  // =========== !Menu =========================
+
+  // ============ Portfolio ======================
+
+  portfolioBtns.addEventListener("click", function (e) {
+    let btn = e.target;
+
+    if (btn.classList.contains("btn-group__btn")) {
+      Array.from(this.children).forEach((item) =>
+        item.classList.remove("active-btn")
+      );
+      btn.classList.add("active-btn");
+      changeImage(btn);
+    }
+  });
+
+  // change photos in the portfolio section
+  function changeImage(btn) {
+    portfolioImgs.forEach((img, index) => {
+      img.classList.add("scale-img");
+      img.src = `./assets/portfolio/${btn.dataset.season}/${index + 1}.jpg`;
+      img.alt = `${btn.dataset.season}-photo`;
+      setTimeout(() => img.classList.remove("scale-img"), 500);
+    });
+  }
+
+  // ============ !Portfolio ======================
+
+  // ============= Translate ======================
+
+  langRadioBtn.addEventListener("change", function (e) {
+    Array.from(e.currentTarget.children).forEach((label) =>
+      label.classList.remove("active-lang")
+    );
+    getTranslate(e.target.id);
+  });
+
+  function getTranslate(lang) {
+    document.querySelector(`[for="${lang}"]`).classList.add("active-lang"); // backlight active btn
+
+    document.querySelectorAll("[data-i18n]").forEach((elem) => {
+      elem.textContent = i18Obj[lang][elem.dataset.i18n];
+      localStorage.setItem("lang", lang);
+      if (elem.placeholder) {
+        elem.placeholder = i18Obj[lang][elem.dataset.i18n];
+        elem.textContent = "";
+      }
+    });
+  }
+
+  if (localStorage.getItem("lang") != null) {
+    getTranslate(localStorage.getItem("lang"));
+  }
+
+  // ============= !Translate ======================
+
+  // ============= Theme ===========================
+
+  themeBtn.addEventListener("click", function (e) {
+    this.children[0].classList.add("change-theme");
+
+    setTimeout(() => {
+      this.children[0].classList.remove("change-theme");
+    }, 900);
+    if (this.dataset.theme === "black") {
+      this.dataset.theme = "light";
+      changeTheme(this.dataset.theme);
+      localStorage.setItem("theme", this.dataset.theme);
+    } else {
+      this.dataset.theme = "black";
+      changeTheme(this.dataset.theme);
+      localStorage.setItem("theme", this.dataset.theme);
+    }
+  });
+
+  if (localStorage.getItem("theme") != null) {
+    changeTheme(localStorage.getItem("theme"));
+  } else {
+  }
+
+  function changeTheme(theme) {
+    let icon = document.querySelector(".theme-icon > use");
+    if (theme === "light") {
+      icon.setAttribute("xlink:href", "./assets/img/svg/moon-sprite.svg#moon");
+      document.documentElement.style.setProperty("--body-color", "#fff"),
+        document.documentElement.style.setProperty("--text-color", "#000");
+      themeBtn.dataset.theme = theme;
+    } else {
+      icon.setAttribute("xlink:href", "./assets/img/svg/sun-sprite.svg#sun");
+      document.documentElement.style.setProperty("--body-color", "#000"),
+        document.documentElement.style.setProperty("--text-color", "#fff");
+      themeBtn.dataset.theme = theme;
+    }
+  }
+
+  // ============= !Theme ===========================
 });
 
 //self-esteem
-
+/*
 console.log(`
 1. Верстка валидная. +10
   ° Для проверки использован сервис W3C, ошибки отсутствуют\n
@@ -89,3 +193,4 @@ console.log(`
   ° при клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, крестик превращается в бургер-иконку 
   
 `);
+*/

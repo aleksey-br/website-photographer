@@ -4,6 +4,7 @@
     display: flex;
     gap: 25px;
     flex-wrap: wrap;
+    justify-content: center;
     @include _768 {
       justify-content: center;
       gap: 50px;
@@ -12,26 +13,11 @@
   }
   // .price__card
   &__card {
-    padding: 43px 112px 40px;
+    max-width: 420px;
+    flex: 1 1 320px;
+    padding: 43px 0;
     text-align: center;
     border: 3px solid $gold;
-
-    &:last-child {
-      padding-right: 109px;
-      @include _768 {
-        padding-right: 96px;
-      }
-      @include _480 {
-        padding: 42px 30px;
-      }
-    }
-    @include _768 {
-      max-width: 420px;
-      padding: 42px 96px 40px;
-    }
-    @include _480 {
-      padding: 42px 30px;
-    }
   }
 }
 

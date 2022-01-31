@@ -12,6 +12,7 @@ a {
 
 html {
   scroll-behavior: smooth;
+  transition: 0.4s;
 }
 
 body {
@@ -19,7 +20,7 @@ body {
   font-family: $inter;
   font-weight: normal;
   font-size: 18px;
-  color: $white;
+  color: $textColor;
   @include _768 {
     overflow-x: hidden;
   }
@@ -28,7 +29,7 @@ body {
 section {
   margin-bottom: 120px;
   &:last-child {
-    margin-bottom: 105px;
+    margin-bottom: 0;
   }
   @include _768 {
     margin-bottom: 100px;
