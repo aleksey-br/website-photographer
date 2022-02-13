@@ -1,0 +1,45 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  // .modal__wrap
+  &__wrap {
+    max-width: 600px;
+    width: 100%;
+    height: 400px;
+    background: $bgWhite;
+    border-radius: 10px;
+    position: relative;
+    z-index: 100;
+    transform: translateY(-100px);
+    transition: 0.4s;
+    visibility: hidden;
+  }
+  // .modal__poster
+  &__poster {
+  }
+  // .modal__info
+  &__info {
+  }
+  // .modal__title
+  &__title {
+  }
+  // .modal__overview
+  &__overview {
+  }
+  // .modal__properties
+  &__properties {
+  }
+}
+
+.active {
+  transform: translateY(-100px);
+  transition: 0.4s;
+  visibility: visible;
+}

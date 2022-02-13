@@ -1,0 +1,19 @@
+:root {
+  --bg-white: #fff;
+  --bg-black: #232323;
+  --white-color: #fff;
+  --black-color: #232323;
+  --light-grey-color: #a2a2be;
+  --grey-color: #5b5b73;
+  --red-color: #d22f27;
+}
+
+// backgrount theme
+$bgWhite: var(--bg-white);
+$bgBlack: var(--bg-black);
+// pages color
+$white: var(--white-color);
+$black: var(--black-color);
+$grey: var(--grey-color);
+$light-grey: var(--light-grey-color);
+$red: var(--red-color);
