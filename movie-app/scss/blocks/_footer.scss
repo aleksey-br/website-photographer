@@ -1,0 +1,51 @@
+.footer {
+  width: 100%;
+  background: $bgBlack;
+
+  // .footer__wrap
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $bgWhite;
+  }
+  // .footer__github
+  &__github {
+  }
+  // .footer__course
+  &__course {
+  }
+}
+
+.github {
+  // .github__link
+  &__link {
+  }
+}
+.github-icon {
+  width: 80px;
+  height: 80px;
+  fill: $bgWhite;
+  transition: 0.4s;
+  cursor: pointer;
+  &:hover {
+    fill: $red;
+    transition: 0.4s;
+  }
+}
+.course {
+  // .course__link
+  &__link {
+  }
+}
+.course-icon {
+  width: 80px;
+  height: 80px;
+  fill: $bgWhite;
+  transition: 0.4s;
+  cursor: pointer;
+  &:hover {
+    fill: $red;
+    transition: 0.4s;
+  }
+}

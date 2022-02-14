@@ -8,110 +8,101 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="header _shadow">
-      <div class="_container">
-        <div class="header__wrap">
-          <a class="header__logo" href="#">
-            <div class="logo__img">
-              <svg class="logo__icon">
-                <use href="./assets/svg/logo-icon.svg#movie-logo"></use>
-              </svg>
+    <div class="wrapper">
+      <header class="header _shadow">
+        <div class="_container">
+          <div class="header__wrap">
+            <a class="header__logo" href="#">
+              <div class="logo__img">
+                <svg class="logo__icon">
+                  <use href="./assets/svg/logo-icon.svg#movie-logo"></use>
+                </svg>
+              </div>
+              <div class="logo__title">Movie app</div>
+            </a>
+            <div class="header__search">
+              <form autocomplete="off" class="search__form">
+                <input class="search__input" autofocus placeholder="spider" />
+
+                <button type="button" class="search__btn">
+                  <svg class="search__icon">
+                    <use href="./assets/svg/search-icon.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
             </div>
-            <div class="logo__title">Movie app</div>
-          </a>
-          <div class="header__search">
-            <form action="" class="search__form">
-              <input class="search__input" autofocus value=" " />
-              <button type="submit" class="search__btn">
-                <svg class="search__icon">
-                  <use href="./assets/svg/search-icon.svg#search"></use>
+            <div class="header__theme">
+              <button class="theme__btn js-theme">
+                <svg class="theme__icon">
+                  <use href="./assets/svg/moon-icon.svg#moon"></use>
                 </svg>
               </button>
-            </form>
-          </div>
-          <div class="header__theme">
-            <button class="theme__btn js-theme">
-              <svg class="theme__icon">
-                <use href="./assets/svg/moon-icon.svg#moon"></use>
-              </svg>
-            </button>
-            <div class="theme__lang">
-              <label class="theme__lang--label" for="ru"
-                >Ru
-                <input
-                  type="radio"
-                  class="lang__radio"
-                  name="contact"
-                  value="ru"
-                  id="ru"
-                />
-              </label>
-              <span class="theme__lang-line"></span>
-              <label class="theme__lang--label lang-active" for="en"
-                >En
-                <input
-                  type="radio"
-                  class="lang__radio"
-                  name="contact"
-                  value="en"
-                  id="en"
-                  checked
-                />
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- /.header -->
-    <main class="main">
-      <div class="_container">
-        <section class="films">
-          <h2 class="section-title" data-lang="films">Films</h2>
-          <div class="films__filter">
-            <!-- <div class="films__genre">
-              <label for="genre" data-lang="genres"> Genres </label>
-              <select name="genre" id="genre">
-                <option value="ffff">fff</option>
-                <option value="ffff">dddd</option>
-                <option value="ffff">dcccc</option>
-              </select>
-            </div> -->
-          </div>
-          <div class="films__card">
-            <!-- <div class="film">
-              <div class="film__rating">7.8</div>
-              <div class="film__poster">
-                <img
-                  src="https://image.tmdb.org/t/p/w1280/i0z8g2VRZP3dhVvvSMilbOZMKqR.jpg"
-                  alt="poster"
-                />
-                <div class="film__properties"></div>
+              <div class="theme__lang">
+                <label class="theme__lang--label" for="ru"
+                  >Ru
+                  <input
+                    type="radio"
+                    class="lang__radio"
+                    name="contact"
+                    value="ru"
+                    id="ru"
+                  />
+                </label>
+                <span class="theme__lang-line"></span>
+                <label class="theme__lang--label lang-active" for="en"
+                  >En
+                  <input
+                    type="radio"
+                    class="lang__radio"
+                    name="contact"
+                    value="en"
+                    id="en"
+                    checked
+                  />
+                </label>
               </div>
-
-              <div class="film__info"></div>
-              <div class="film__title">Lorem, ipsum dolor.</div>
-            </div> -->
-          </div>
-        </section>
-        <!-- /.films -->
-        <div class="modal">
-          <div class="modal__wrap">
-            <div class="modal__poster"></div>
-            <div class="modal__info">
-              <div class="modal__title"></div>
-              <div class="modal__overview"></div>
-              <div class="modal__properties"></div>
             </div>
           </div>
         </div>
-        <!-- /. modal -->
-      </div>
-    </main>
-    <!-- /.main -->
-    <footer class="footer"></footer>
-    <!-- /.footer -->
-
+      </header>
+      <!-- /.header -->
+      <main class="main">
+        <div class="_container">
+          <section class="films">
+            <h2 class="section-title" data-lang="films">Films</h2>
+            <div class="films__card"></div>
+          </section>
+          <!-- /.films -->
+          <div class="modal">
+            <div class="modal__wrap"></div>
+          </div>
+          <!-- /. modal -->
+        </div>
+      </main>
+      <!-- /.main -->
+      <footer class="footer">
+        <div class="_container">
+          <div class="footer__wrap">
+            <span>© 2022</span>
+            <div class="footer__github">
+              <a class="github__link" href="https://github.com/abra-93">
+                <svg class="github-icon">
+                  <use href="./assets/svg/github-icon.svg#github"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="footer__course">
+              <a class="course__link" href="https://rs.school/js-stage0/">
+                <svg class="course-icon">
+                  <use href="./assets/svg/rslogo-icon.svg#rsslogo"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /.footer -->
+    </div>
     <!-- Script -->
     <script type="module" src="./js/script.js"></script>
   </body>
