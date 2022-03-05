@@ -1,2 +1,16 @@
-# abra-93-JSFEPRESCHOOL
-Private repository for @abra-93
+# portfolio
+
+## [Task ](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/portfolio/portfolio.md)
+
+![Screenshot](./Desctop.png)
+
+## [Deploy](https://abra-93.github.io/website-photographer/)
+
+---
+
+### Использованные технологии:
+
+- HTML
+- SASS
+- JAVASCRIPT
+- Верстка по "БЕМ" методологии
