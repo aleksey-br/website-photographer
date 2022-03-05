@@ -1,0 +1,123 @@
+.contacts {
+  background: #000;
+  // .contacts__bg
+  &__bg {
+    background-image: url("../assets/img/contacts.jpg");
+    background-size: auto 700px;
+    background-repeat: no-repeat;
+    background-position: top;
+    @include _768 {
+      background-size: auto 600px;
+    }
+    @include _480 {
+      background-position: -230px;
+    }
+  }
+  // .contacts__wrap
+  &__wrap {
+    margin: -20px;
+    // height: 700px;
+    display: flex;
+    justify-content: right;
+    @include _768 {
+      justify-content: center;
+    }
+  }
+  // .contacts__content
+  &__content {
+    max-width: 470px;
+    padding: 77px 0px 195px;
+
+    @include _768 {
+      max-width: 462px;
+      padding: 71px 0px 114px;
+      text-align: center;
+    }
+  }
+  // .contacts__section-title
+  &__section-title {
+    margin-bottom: 56px;
+    font-family: $merri;
+    font-size: 40px;
+    font-weight: bold;
+    color: $gold;
+
+    @include _768 {
+      font-size: 32px;
+      text-align: center;
+    }
+  }
+  // .contacts__form
+  &__form {
+    @include _480 {
+      padding: 0 20px;
+    }
+  }
+}
+.form {
+  // .form__input--mail
+  &__input--mail {
+    max-width: 450px;
+    width: 100%;
+    height: 50px;
+    padding: 0px 18px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 3px solid $gold;
+    font-size: 20px;
+    color: #fff;
+    outline: none;
+    &::placeholder {
+      color: $gold;
+    }
+  }
+  // .form__input--phone
+  &__input--phone {
+    max-width: 450px;
+    width: 100%;
+    height: 50px;
+    padding: 0px 18px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 3px solid $gold;
+    font-size: 20px;
+    color: #fff;
+    outline: none;
+    &::placeholder {
+      color: $gold;
+    }
+  }
+  // .form__message--text
+  &__message--text {
+    max-width: 450px;
+    width: 100%;
+    height: 100px;
+    padding: 11px 18px;
+    margin-bottom: 28px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 3px solid $gold;
+    font-size: 20px;
+    color: #fff;
+    outline: none;
+    &::placeholder {
+      color: $gold;
+    }
+    @include _768 {
+      margin-bottom: 26px;
+    }
+  }
+  &__btn--submit {
+    padding: 15px 40px;
+    background: $gold;
+    border: none;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover {
+      background: #807248;
+      color: #fff;
+      transition: 0.3s;
+    }
+  }
+}

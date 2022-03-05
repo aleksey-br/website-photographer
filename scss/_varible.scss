@@ -1,0 +1,15 @@
+//  Color page
+$bgDark: var(--body-color);
+$gold: var(--hover-color);
+$textColor: var(--text-color);
+$whiteText: #fff;
+
+:root {
+  --body-color: #000;
+  --hover-color: #bdae82;
+  --text-color: #ffffff;
+}
+
+// Fonts page
+$merri: "Merriweather", serif;
+$inter: "Inter", sans-serif;
