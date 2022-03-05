@@ -2,7 +2,6 @@ import translate from "./translate.js";
 // import films from "./films.js";
 
 let isTheme = false;
-let isData = false;
 let isLang = "en";
 const themeBtn = document.querySelector(".js-theme");
 const form = document.querySelector("form");
@@ -10,7 +9,7 @@ let input = document.querySelector("input");
 let searchBtn = document.querySelector(".search__btn");
 let searchIcon = document.querySelector(".search__icon");
 let parent = document.querySelector(".films__card");
-let langGroup = document.querySelectorAll("label");
+let langGroup = document.querySelector(".theme__lang");
 // модальное окно
 let modal = document.querySelector(".modal");
 let modalWindow = document.querySelector(".modal__wrap");
@@ -31,6 +30,7 @@ function changeTheme(isTheme) {
 
 function changeLang(lang) {
   let input = lang.children[0].value;
+  lang.classList.add("lang-active");
   isLang = input;
   getFilmsAll();
   document.querySelectorAll("[data-lang]").forEach((elem) => {
@@ -39,12 +39,12 @@ function changeLang(lang) {
 }
 themeBtn.addEventListener("click", () => changeTheme((isTheme = !isTheme)));
 
-langGroup.forEach((input) => {
-  input.classList.remove("lang-active");
-  input.addEventListener("change", function () {
-    this.classList.add("lang-active");
-    changeLang(input);
+langGroup.addEventListener("change", (e) => {
+  Array.from(e.currentTarget.children).forEach((label) => {
+    label.classList.remove("lang-active");
   });
+  isLang = e.target.id;
+  changeLang(e.target.parentElement);
 });
 
 // Очищаем инпут при клике на крестик
@@ -102,12 +102,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// modalWindow.addEventListener("click", (e) => {
-//   if (e.target.classList.contains("modal__close-btn")) {
-//     loadModal();
-//   }
-// });
-
 // ============================ Films ===============================//
 const API_KEY = "997f97c9c2ecf6e5b4eb38c47b4c3274";
 let html = "";
@@ -135,7 +129,7 @@ getFilmsAll();
 // Ишем фильм по запросу
 async function searchFilms(value) {
   try {
-    const url = `https://api.themoviedb.org/3/search/movie?query=${value}&api_key=${API_KEY}`;
+    const url = `https://api.themoviedb.org/3/search/movie?query=${value}&api_key=${API_KEY}&language=${isLang}-${isLang.toUpperCase()}`;
     let res = await fetch(url);
     let data = await res.json();
     let searchFilms = await data.results;
@@ -167,7 +161,6 @@ document.addEventListener("keydown", (e) => {
   return false;
 });
 
-//https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
 //  Получаем информацию по фильму
 async function filmInfo(film) {
   console.log(film);
