@@ -4,7 +4,7 @@
 
 ![Screenshot](./desktop.png)
 
-## [Deploy](https://aleksey-br.github.io/website-photographer/)
+## [Deploy](https://lex-gh.github.io/website-photographer/)
 
 ---
 
